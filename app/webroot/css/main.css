@@ -1,0 +1,23 @@
+
+.form-control{width: 50%}
+
+.container{max-width: 750px}
+
+#header{ border:1px dotted lightgrey; padding:10px 10px 10px 10px; margin-bottom: 10px; }
+
+            #logo { border:1px dotted grey; text-align: left; padding-left: 8px; line-height:50px; vertical-align: middle}
+
+            #login{ border:1px dotted grey; text-align: right; padding-right: 40px; line-height:50px;vertical-align: middle;}
+
+#main{ border:1px dotted lightgrey; margin-bottom: 10px; padding-left: 20px; min-height: 400px; position: relative}
+
+
+#footer{ border:1px dotted lightgrey; height:100px; min-height: 100%}
+
+.row{ border:1px dotted #000000; }
+
+.error-message{color:red ;}
+
+#globalsearch{min-height:200px; border:1px solid lightgrey}
+
+.colpad{padding: 10px }

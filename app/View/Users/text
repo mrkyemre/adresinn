@@ -1,0 +1,135 @@
+$(document).ready(function(){
+
+        $('#register').click(function(){
+
+            var form=$("#UserRegisterForm").serialize();
+
+            $.ajax({
+
+                type:'POST',
+                url:'/project/Users/register',
+                data:form,
+
+                success:function(data){
+                    $('#selectdistrict').html(data);
+
+                }
+
+            })
+        })
+    });
+
+
+
+
+            'data[User][lastname]' :{required: true},
+                        'data[User][email]' :{required: true},
+                        'data[User][password]' :{required: true}
+
+
+
+    $(document).ready(function(){
+
+            $("#UserLoginForm").validate({
+
+               rules:{
+
+                  'data[User][email]' :
+                  {
+
+                      required: true
+
+                  }
+                  },
+
+               messages:{
+
+                    'data[User][email]' : {
+
+                     required: "Enter a new one"
+
+                    }
+
+
+                }
+
+
+            });
+
+            });
+
+
+
+
+
+
+
+
+
+    $(document).ready(function(){
+
+
+        $('#register').click(function(){
+
+
+            $('#UserRegisterForm').validate({
+
+                rules: {
+
+                    'data[User][firstname]' : {
+
+                        required: true
+
+                    }
+
+
+                }
+
+
+            });
+
+
+
+
+            var form=$("#UserRegisterForm").serialize();
+
+            $.ajax({
+
+                type:'POST',
+                url:'/project/Users/register',
+                data:form,
+
+                success:function(data){
+                    $('#selectdistrict').html(data);
+
+                }
+
+            })
+        })
+
+
+
+
+
+    });
+
+
+        $(document).ready(function(){
+
+            $('#register_email').change(function(){
+
+                var regemail = $('#register_email').val();
+
+                $.post(
+
+                    '/project/Users/checkuser',
+                    {regemail:regemail},
+
+                    function(datam){
+
+                    $('#checkemailresult').html(datam);
+
+                })
+            })
+
+            });
